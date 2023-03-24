@@ -26,7 +26,6 @@ public class ReqMgmtController {
 		
 		return "/poRequest/reqMgmt";
 	}
-	
 	@RequestMapping("/reqMg2")
 	public String reqMamt2(Model model) throws Exception {
 		List<ReqMgmtDetailDTO> reqMgmtDetail=reqMgmtService.reqMgmtDetail();
