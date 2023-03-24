@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.ReqMgmt">
+
+	<select id="reqMgmtList" resultType="reqMgmtDTO">
+		<![CDATA[
+			select pi.in_number, pi.in_empid, pi.in_type, pi.in_date, pi.in_trans_type, pr.request_number, mcc.client_code, mcc.client_name, pi.in_regdate,pi.in_memo
+			from po_in pi, po_request pr, ma_client_company mcc
+			where pi.request_number = pr.request_number 
+			and pi.client_code= mcc.client_code
+			order by in_number desc
+		]]> 	
+	</select>
+	
+	<select id="reqMgmtDetail" resultType="reqMgmtDetailDTO">
+		<![CDATA[
+			select pid.in_order,mi.item_code,mi.item_name,mi.item_no,mi.item_specification,mi.item_stock_unit,w.warehouse_code,w.warehouse_name,pid.in_detail_quantity,pid.price,pid.in_detail_amount,pid.in_detail_tax_amount,pid.in_detail_memo,pi.in_number,prd.request_order
+			from po_in_detail pid, ma_item mi, po_in pi, wh w, po_request_detail prd
+			where pid.item_code=mi.item_code
+			and pid.warehouse_code = w.warehouse_code
+			and pid.in_number =pi.in_number
+			and pid.request_order= prd.request_order
+			order by in_order desc
+		]]> 	
+	</select>
+	
+	
+
+</mapper>

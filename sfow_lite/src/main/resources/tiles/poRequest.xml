@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+       
+<tiles-definitions>
+    <!--  poRequest -->
+     <definition name="/poRequest/reqMgmt" extends="bodylayout">
+    	<put-attribute name="body" value="/WEB-INF/views/poRequest/reqMgmt.jsp"></put-attribute>
+    </definition>
+    
+     <definition name="/test" extends="bodylayout">
+    	<put-attribute name="body" value="/WEB-INF/views/poRequest/test.jsp"></put-attribute>
+    </definition>
+    
+    
+</tiles-definitions>
