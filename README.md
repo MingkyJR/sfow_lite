@@ -35,6 +35,8 @@ sfow_lite 기업 협업프로젝트
 
 ![image](https://github.com/MingkyJR/sfow_lite/assets/99116319/5503e5a6-1a46-4286-91a9-e4fde103f14f)
 
+자재 추가 페이지를 모달창으로 구성
+
 ![image](https://github.com/MingkyJR/sfow_lite/assets/99116319/796e3e77-4e19-4c4b-a86a-8cf27d600a1a)
 
 ![image](https://github.com/MingkyJR/sfow_lite/assets/99116319/6705e24a-9a34-4c59-b49c-1d921139691a)
